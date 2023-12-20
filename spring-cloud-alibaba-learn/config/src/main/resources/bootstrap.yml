@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        password: nacos
+        username: nacos
+        server-addr: 192.168.52.129:8848
+        namespace: 20fbb1f6-fb66-4a15-ba29-aa19a1a48dbb
+        file-extension: yaml
+        extension-configs:
+          - data-id: config-ex.yaml
+            refresh: true

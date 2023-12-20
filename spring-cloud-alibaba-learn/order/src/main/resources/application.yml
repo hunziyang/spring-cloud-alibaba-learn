@@ -1,0 +1,34 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.52.129:8848
+        username: nacos
+        password: nacos
+        namespace: 20fbb1f6-fb66-4a15-ba29-aa19a1a48dbb
+#stock:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.yang.cloud.config.YangRule
+ribbon:
+  eager-load:
+    enabled: true
+    clients: stock
+#logging:
+#  level:
+#    com.yang.cloud.order.feign: debug
+#feign:
+#  client:
+#    config:
+#      stock:
+#        logger-level: HEADERS
+#        connect-timeout: 5000
+#        read-timeout: 5000
+#        request-interceptors:
+#          - com.yang.cloud.order.interceptor.feign.CustomInterceptor
+feign:
+  sentinel:
+    enabled: true

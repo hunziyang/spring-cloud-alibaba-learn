@@ -1,0 +1,12 @@
+server:
+  port: 8060
+spring:
+  application:
+    name: config
+  cloud:
+    nacos:
+      discovery:
+        namespace: 20fbb1f6-fb66-4a15-ba29-aa19a1a48dbb
+        username: naocs
+        password: nacos
+        server-addr: 192.168.52.129:8848

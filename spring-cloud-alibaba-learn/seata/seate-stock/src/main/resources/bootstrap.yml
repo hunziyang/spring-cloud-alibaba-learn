@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: seata-stock
+  cloud:
+    nacos:
+      config:
+        namespace: f4677f31-643c-492b-861f-9084f6db25bb
+        username: nacos
+        password: nacos
+        extension-configs:
+          - data-id: mysql.yaml
+            file-extension: yaml
+        server-addr: 192.168.52.129:8848
