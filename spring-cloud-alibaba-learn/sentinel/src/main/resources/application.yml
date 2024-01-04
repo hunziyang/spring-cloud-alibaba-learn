@@ -1,0 +1,26 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: sentinel
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.52.129:8848
+        username: nacos
+        password: nacos
+        namespace: 20fbb1f6-fb66-4a15-ba29-aa19a1a48dbb
+    sentinel:
+      transport:
+        dashboard: 192.168.52.129:8090
+      web-context-unify: false  # 开启链路统计
+      datasource:
+        flow:
+          nacos:
+            data-id: sentinel-flow-rule.json
+            username: nacos
+            password: nacos
+            namespace: 20fbb1f6-fb66-4a15-ba29-aa19a1a48dbb
+            server-addr: 192.168.52.129:8848
+            data-type: json
+            rule-type: flow

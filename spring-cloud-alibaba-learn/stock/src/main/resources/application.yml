@@ -1,0 +1,12 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: stock
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.52.129:8848
+        username: nacos
+        password: nacos
+        namespace: 20fbb1f6-fb66-4a15-ba29-aa19a1a48dbb

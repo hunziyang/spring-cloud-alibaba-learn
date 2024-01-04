@@ -1,0 +1,35 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.52.129:8848
+        username: nacos
+        password: nacos
+        namespace: f4677f31-643c-492b-861f-9084f6db25bb
+        group: SEATA_GROUP
+server:
+  port: 8051
+seata:
+  registry:
+    nacos:
+      application: seata-server
+      group: SEATA_GROUP
+      server-addr: 192.168.52.129:8848
+      username: nacos
+      password: nacos
+      namespace: f4677f31-643c-492b-861f-9084f6db25bb
+    type: nacos
+  config:
+    nacos:
+      server-addr: 192.168.52.129:8848
+      group: SEATA_GROUP
+      namespace: f4677f31-643c-492b-861f-9084f6db25bb
+      password: nacos
+      username: nacos
+    type: nacos
+  tx-service-group: default_tx_group
+  service:
+    default_tx_group:
+      vgroup-mapping:
+        default_tx_group: default
+  enable-auto-data-source-proxy: true
